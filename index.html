@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>数字並べ替えパズル</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🔢 数字スライドパズル 🧩</h1>
+        <div class="score-board">
+            <p>手数: <span id="turns">0</span> 回</p>
+        </div>
+        
+        <!-- 3x3のパズル盤面 -->
+        <div id="grid" class="grid"></div>
+
+        <!-- スマホ用コントローラー（移動させたい方向やパネルを選ぶための方向ボタン） -->
+        <div class="controller">
+            <button class="ctrl-btn" id="btn-up">⬆️</button>
+            <div class="middle-btns">
+                <button class="ctrl-btn" id="btn-left">⬅️</button>
+                <button class="ctrl-btn" id="btn-right">➡️</button>
+            </div>
+            <button class="ctrl-btn" id="btn-down">⬇️</button>
+        </div>
+
+        <button id="restart-btn">はじめからやり直す</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
