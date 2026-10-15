@@ -1,0 +1,121 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fce4ec; /* パステルピンク系の可愛い背景 */
+    color: #4a4a4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    touch-action: none;
+}
+
+.game-container {
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    color: #d81b60;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.score-board {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* 3x3のパズルグリッド */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 85px);
+    grid-template-rows: repeat(3, 85px);
+    gap: 6px;
+    justify-content: center;
+    background-color: #ad1457;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    margin: 0 auto 15px auto;
+}
+
+/* パネルのスタイル */
+.tile {
+    background-color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: background 0.1s, transform 0.1s;
+}
+
+.tile:hover {
+    background-color: #f8bbd0;
+}
+
+/* 空白のパネル */
+.tile.empty {
+    background-color: #ad1457;
+    box-shadow: none;
+    cursor: default;
+}
+
+/* スマホ用コントローラー */
+.controller {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 15px;
+}
+
+.middle-btns {
+    display: flex;
+    gap: 70px;
+}
+
+.ctrl-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    background-color: #ffffff;
+    color: #333;
+    border: 2px solid #f8bbd0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.ctrl-btn:active {
+    background-color: #f8bbd0;
+    transform: scale(0.95);
+}
+
+#restart-btn {
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#restart-btn:hover {
+    background-color: #ad1457;
+}
